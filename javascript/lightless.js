@@ -15,9 +15,9 @@
 			position: [1, 1],
 			stepTime: 600,
 			maxWater: 420000,
-			maxTime: 2700000,
+			maxTime: 3600000,
 			water: 420000,
-			time: 2700000,
+			time: 3600000,
 			distortion: 0,
 			links: {
 				use: 'use-link',
@@ -436,8 +436,8 @@
 				},
 				showWin: function( gameTime ){
 					_addMessage( 'YEAH!!!!!!!!!!!!!! I did it!!!!!!!', 'win' );
-					_addMessage( 'Time is: ' + ( gameTime / 60000 ) + ' min.' +
-						( gameTime - ( parseInt( gameTime / 60000 ) * 60000 ) ) + ' sec.', 'win' );
+					_addMessage( 'Time is: ' + parseInt( ( gameTime / 60000 ) ) + ' min. ' +
+						parseInt( ( gameTime - ( parseInt( gameTime / 60000 ) * 60000 ) ) / 1000 ) + ' sec.', 'win' );
 					_addMessage( 'It`s a great Time!!!', 'win' );
 				}
 			};
