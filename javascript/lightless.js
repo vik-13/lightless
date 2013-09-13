@@ -400,7 +400,6 @@
 				updateNeedsWater: function(){
 					var random = Math.random();
 					if( ( new Date() ).getTime() - showNeedsLastUpdate >= 7000 ){
-						console.log( g.water );
 						if( random < ( 1 - ( g.water / g.maxWater ) ) ){
 							_addMessage( Messages.needs['drink'], 'system-thought' );
 						}
